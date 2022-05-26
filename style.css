@@ -1,0 +1,31 @@
+.header {
+    color:black;
+    font-weight:bold;
+    font-size: large;
+    text-align: center;
+    align-items: center;
+    margin:60px;
+    background-color: rgb(18, 75, 75);
+}
+.board {
+    height:100px;
+    width: 1400px;
+    background-color:white;
+    margin: 60px;
+    display: flex;
+    justify-content: space-around;
+
+}
+.left{
+    background-color: rgb(202, 220, 215);
+}
+.right{
+    background-color: rgb(202, 220, 215);
+}
+
+.left-result{
+    background-color: rgb(202, 220, 215);;
+}
+.right-result{
+    background-color: rgb(202, 220, 215);;
+}
