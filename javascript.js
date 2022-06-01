@@ -55,19 +55,19 @@ function playRound(playerSelection, computerSelection) {
 function game() {
         let playerCount = 0;
         let computerCount = 0;
-      //  for (let i = 0; i < 5; i++) {
+        for (let i = 0; i < 5; i++) {
 
-                let playerInput = prompt("Write Rock o, paper or Scissors?");
+                let playerInput = prompt("Write Rock, paper or Scissors?");
                 // your code here!
-                let computerInput=computerPlay();
-                if (playRound(playerInput,computerInput)==='win') {
-                     
+                let computerInput = computerPlay();
+                if (playRound(playerInput, computerInput) === 'win') {
+
                         playerCount++;
                         console.log("You win")
 
                 }
-                else if (playRound(playerInput,computerInput)==='lose') {
-                        
+                else if (playRound(playerInput, computerInput) === 'lose') {
+
                         computerCount++;
                         console.log("computer Win")
                 }
@@ -76,10 +76,10 @@ function game() {
                         console.log("No one win this round")
                 }
 
-               
 
 
-     //   }
+
+        }
         if (playerCount > computerCount) {
                 console.log("You are a champion")
         }
@@ -91,3 +91,17 @@ function game() {
         }
 
 }
+
+//adding eventlistener
+const btn1 = document.querySelector('#btn1');
+const btn2 = document.querySelector('#btn2');
+const btn3 = document.querySelector('#btn3');
+btn1.addEventListener('click', () => {
+        playRound("rock", computerPlay())
+});
+btn2.addEventListener('click', () => {
+        playRound("paper", computerPlay())
+});
+btn3.addEventListener('click', () => {
+        playRound("scissors", computerPlay())
+});
