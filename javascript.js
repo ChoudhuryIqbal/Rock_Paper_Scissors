@@ -55,7 +55,7 @@ function playRound(playerSelection, computerSelection) {
 function game() {
         let playerCount = 0;
         let computerCount = 0;
-        for (let i = 0; i < 5; i++) {
+      //  for (let i = 0; i < 5; i++) {
 
                 let playerInput = prompt("Write Rock o, paper or Scissors?");
                 // your code here!
@@ -79,7 +79,7 @@ function game() {
                
 
 
-        }
+     //   }
         if (playerCount > computerCount) {
                 console.log("You are a champion")
         }
