@@ -1,37 +1,62 @@
 body {
-    background-color: cornsilk;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+  background-color: cornsilk;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .header {
-    background-color: white;
-    width: 800px;
-    height: 250px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+  background-color: white;
+  width: 800px;
+  height: 250px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.scorecard {
+  margin-top: 70px;
+  background-color: white;
+  width: 800px;
+  height: 250px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+}
+.scorecard p {
+  font-style: bold;
+  font-size: 20px;
+  font-weight:bolder;
+  border-style: solid;
+  border-radius: 0pc;
+  padding: 10px;
+  text-align: center;
+  background-color: yellow;
+}
+.scorecard input{
+    border-style: solid;
+    height: 30px;
+    margin-right:50px;
+    margin-left:50px;
+    border-width: 3px;
+    font-style: bold;
 }
 
 .header h1 {
-    margin: 0;
-    padding: 0;
-    font-size: 40px;
+  margin: 0;
+  padding: 0;
+  font-size: 40px;
 }
 
 .banner {
-    width: 300px;
-    height: 60px;
-    background-color: green;
+  width: 300px;
+  height: 60px;
+  background-color: green;
 
-    font-size: 32px;
-    font-style: bold;
-    padding-top: 20px;
-    padding-bottom: 0px;
-
-
+  font-size: 32px;
+  font-style: bold;
+  padding-top: 20px;
+  padding-bottom: 0px;
 }
