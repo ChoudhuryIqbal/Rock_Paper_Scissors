@@ -35,13 +35,18 @@ body {
   text-align: center;
   background-color: yellow;
 }
-.scorecard input{
+#player-text,#computer-text{
     border-style: solid;
     height: 30px;
+    width: 60px;
     margin-right:50px;
     margin-left:50px;
     border-width: 3px;
     font-style: bold;
+    border-color: black;
+   padding:10px;
+   text-align: center;
+   font-size: 30px;
 }
 
 .header h1 {

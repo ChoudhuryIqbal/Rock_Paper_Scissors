@@ -52,6 +52,7 @@ function playRound(playerSelection, computerSelection) {
 
 
 }
+
 function game() {
         let playerCount = 0;
         let computerCount = 0;
@@ -96,12 +97,50 @@ function game() {
 const btn1 = document.querySelector('#btn1');
 const btn2 = document.querySelector('#btn2');
 const btn3 = document.querySelector('#btn3');
+const playerResult = document.querySelector('#player-text');
+const computerResult = document.querySelector("#computer-text");
+let playercounter = 0;
+let computercounter = 0;
 btn1.addEventListener('click', () => {
-        playRound("rock", computerPlay())
+        if (playRound("rock", computerPlay()) == "won") {
+                playercounter++;
+                playerResult.textContent = playercounter;
+        }
+        else if (playRound("rock", computerPlay()) == "draw") {
+                //do nothing;
+        }
+        else {
+                computercounter++;
+                computerResult.textContent = computercounter;
+        }
+
 });
 btn2.addEventListener('click', () => {
-        playRound("paper", computerPlay())
+        if (playRound("rock", computerPlay()) == "won") {
+                playercounter++;
+                playerResult.textContent = playercounter;
+        }
+        else if (playRound("rock", computerPlay()) == "draw") {
+                //do nothing;
+        }
+        else {
+                computercounter++;
+                computerResult.textContent = computercounter;
+        }
 });
 btn3.addEventListener('click', () => {
-        playRound("scissors", computerPlay())
+        if (playRound("rock", computerPlay()) == "won") {
+                playercounter++;
+                playerResult.textContent = playercounter;
+        }
+        else if (playRound("rock", computerPlay()) == "draw") {
+                //do nothing;
+        }
+        else {
+                computercounter++;
+                computerResult.textContent = computercounter;
+        }
 });
+
+//displaying result
+
