@@ -55,11 +55,9 @@ body {
   font-size: 40px;
 }
 
-.banner {
+#banner {
   width: 300px;
   height: 60px;
-  background-color: green;
-
   font-size: 32px;
   font-style: bold;
   padding-top: 20px;

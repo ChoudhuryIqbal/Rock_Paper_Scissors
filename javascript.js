@@ -99,6 +99,7 @@ const btn2 = document.querySelector('#btn2');
 const btn3 = document.querySelector('#btn3');
 const playerResult = document.querySelector('#player-text');
 const computerResult = document.querySelector("#computer-text");
+const finalBanner=document.getElementById("banner");
 let playercounter = 0;
 let computercounter = 0;
 btn1.addEventListener('click', () => {
@@ -114,6 +115,20 @@ btn1.addEventListener('click', () => {
                 computerResult.textContent = computercounter;
         }
 
+
+
+        if (playercounter == 5) {
+               finalBanner.style.backgroundColor = "green";
+                finalBanner.innerHTML="You win!";
+        }
+        else if (computercounter == 5) {
+                finalBanner.style.backgroundColor = "red";
+                finalBanner.innerHTML="You Lose!";
+        }
+        else {
+                //do nothing
+        }
+
 });
 btn2.addEventListener('click', () => {
         if (playRound("rock", computerPlay()) == "won") {
@@ -127,6 +142,19 @@ btn2.addEventListener('click', () => {
                 computercounter++;
                 computerResult.textContent = computercounter;
         }
+
+
+        if (playercounter == 5) {
+                finalResult.style.backgroundcolor = "green";
+                finalResult.textContent("You win!")
+        }
+        else if (computercounter == 5) {
+                finalResult.style.backgroundcolor = "red";
+                finalResult.textContent("You Lose!")
+        }
+        else {
+                //do nothing
+        }
 });
 btn3.addEventListener('click', () => {
         if (playRound("rock", computerPlay()) == "won") {
@@ -139,6 +167,18 @@ btn3.addEventListener('click', () => {
         else {
                 computercounter++;
                 computerResult.textContent = computercounter;
+        }
+
+        if (playercounter == 5) {
+                finalResult.style.backgroundcolor = "green";
+                finalResult.textContent("You win!")
+        }
+        else if (computercounter == 5) {
+                finalResult.style.backgroundcolor = "red";
+                finalResult.textContent("You Lose!")
+        }
+        else {
+                //do nothing
         }
 });
 
