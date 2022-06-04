@@ -52,6 +52,10 @@ function playRound(playerSelection, computerSelection) {
 
 
 }
+function refresh(){
+        window.location.reload();
+}
+
 
 function game() {
         let playerCount = 0;
@@ -100,6 +104,11 @@ const btn3 = document.querySelector('#btn3');
 const playerResult = document.querySelector('#player-text');
 const computerResult = document.querySelector("#computer-text");
 const finalBanner=document.getElementById("banner");
+function disableAllButton(){
+        btn1.disabled=true;
+        btn2.disabled=true;
+        btn3.disabled=true;
+}
 let playercounter = 0;
 let computercounter = 0;
 btn1.addEventListener('click', () => {
@@ -120,10 +129,14 @@ btn1.addEventListener('click', () => {
         if (playercounter == 5) {
                finalBanner.style.backgroundColor = "green";
                 finalBanner.innerHTML="You win!";
+                disableAllButton()
+                window.setInterval('refresh()', 10000);
         }
         else if (computercounter == 5) {
                 finalBanner.style.backgroundColor = "red";
                 finalBanner.innerHTML="You Lose!";
+                disableAllButton()
+                window.setInterval('refresh()', 10000);
         }
         else {
                 //do nothing
@@ -147,10 +160,14 @@ btn2.addEventListener('click', () => {
         if (playercounter == 5) {
                 finalResult.style.backgroundcolor = "green";
                 finalResult.textContent("You win!")
+                disableAllButton()
+                window.setInterval('refresh()',10000);
         }
         else if (computercounter == 5) {
                 finalResult.style.backgroundcolor = "red";
                 finalResult.textContent("You Lose!")
+                disableAllButton()
+                window.setInterval('refresh()',10000);
         }
         else {
                 //do nothing
@@ -172,10 +189,14 @@ btn3.addEventListener('click', () => {
         if (playercounter == 5) {
                 finalResult.style.backgroundcolor = "green";
                 finalResult.textContent("You win!")
+                disableAllButton()
+                window.setInterval('refresh()', 10000);
         }
         else if (computercounter == 5) {
                 finalResult.style.backgroundcolor = "red";
                 finalResult.textContent("You Lose!")
+                disableAllButton()
+                window.setInterval('refresh()', 10000);
         }
         else {
                 //do nothing
