@@ -45,14 +45,8 @@ function playRound(playerSelection, computerSelection) {
 
         }
 
-
-
-
-
-
-
 }
-function refresh(){
+function refresh() {
         window.location.reload();
 }
 
@@ -63,7 +57,6 @@ function game() {
         for (let i = 0; i < 5; i++) {
 
                 let playerInput = prompt("Write Rock, paper or Scissors?");
-                // your code here!
                 let computerInput = computerPlay();
                 if (playRound(playerInput, computerInput) === 'win') {
 
@@ -103,11 +96,12 @@ const btn2 = document.querySelector('#btn2');
 const btn3 = document.querySelector('#btn3');
 const playerResult = document.querySelector('#player-text');
 const computerResult = document.querySelector("#computer-text");
-const finalBanner=document.getElementById("banner");
-function disableAllButton(){
-        btn1.disabled=true;
-        btn2.disabled=true;
-        btn3.disabled=true;
+const finalBanner = document.getElementById("banner");
+
+function disableAllButton() {
+        btn1.disabled = true;
+        btn2.disabled = true;
+        btn3.disabled = true;
 }
 let playercounter = 0;
 let computercounter = 0;
@@ -127,14 +121,14 @@ btn1.addEventListener('click', () => {
 
 
         if (playercounter == 5) {
-               finalBanner.style.backgroundColor = "green";
-                finalBanner.innerHTML="You win!";
+                finalBanner.style.backgroundColor = "green";
+                finalBanner.innerHTML = "You win!";
                 disableAllButton()
                 window.setInterval('refresh()', 10000);
         }
         else if (computercounter == 5) {
                 finalBanner.style.backgroundColor = "red";
-                finalBanner.innerHTML="You Lose!";
+                finalBanner.innerHTML = "You Lose!";
                 disableAllButton()
                 window.setInterval('refresh()', 10000);
         }
@@ -155,23 +149,23 @@ btn2.addEventListener('click', () => {
                 computercounter++;
                 computerResult.textContent = computercounter;
         }
-
-
+        
         if (playercounter == 5) {
-                finalResult.style.backgroundcolor = "green";
-                finalResult.textContent("You win!")
+                finalBanner.style.backgroundColor = "green";
+                finalBanner.innerHTML = "You win!";
                 disableAllButton()
-                window.setInterval('refresh()',10000);
+                window.setInterval('refresh()', 10000);
         }
         else if (computercounter == 5) {
-                finalResult.style.backgroundcolor = "red";
-                finalResult.textContent("You Lose!")
+                finalBanner.style.backgroundColor = "red";
+                finalBanner.innerHTML = "You Lose!";
                 disableAllButton()
-                window.setInterval('refresh()',10000);
+                window.setInterval('refresh()', 10000);
         }
         else {
                 //do nothing
         }
+
 });
 btn3.addEventListener('click', () => {
         if (playRound("rock", computerPlay()) == "won") {
@@ -187,14 +181,14 @@ btn3.addEventListener('click', () => {
         }
 
         if (playercounter == 5) {
-                finalResult.style.backgroundcolor = "green";
-                finalResult.textContent("You win!")
+                finalBanner.style.backgroundColor = "green";
+                finalBanner.innerHTML = "You win!";
                 disableAllButton()
                 window.setInterval('refresh()', 10000);
         }
         else if (computercounter == 5) {
-                finalResult.style.backgroundcolor = "red";
-                finalResult.textContent("You Lose!")
+                finalBanner.style.backgroundColor = "red";
+                finalBanner.innerHTML = "You Lose!";
                 disableAllButton()
                 window.setInterval('refresh()', 10000);
         }
@@ -203,5 +197,5 @@ btn3.addEventListener('click', () => {
         }
 });
 
-//displaying result
+
 
